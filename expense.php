@@ -1,6 +1,10 @@
 <?php
+
 //include / include once /require / require once
 include('config/dbconnect.php');
+require('function/expense_save_funcation.php');
+require('css/expense_save_css.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,16 +16,8 @@ include('config/dbconnect.php');
     <title>Document</title>
 </head>
 
-<body>
-    <style>
-        body {
-            background-color: lightcyan;
-        }
-
-        .card {
-            width: 50%;
-        }
-    </style>
+<body class="bd1">
+    
     <div class="container">
     <div class="card shadow mt-2">
         <div class="card-body">
@@ -51,18 +47,7 @@ include('config/dbconnect.php');
     </div>
 
 
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-        $amount = $_POST['amount'];
-        $description = $_POST['description'];
-        $date = $_POST['date'];
-
-        $sql = "INSERT INTO expenses (amount,description,date)values('$amount','$description','$date')";
-        $result = mysqli_query($con, $sql);
-    }
-
-    ?>
+   
     <section>
         ======================================================================================================================
         <table border="1px" class='table table-striped table-borderd'>
