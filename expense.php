@@ -1,6 +1,6 @@
 <?php
 //include / include once /require / require once
-include('dbconnect.php');
+include('config/dbconnect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
